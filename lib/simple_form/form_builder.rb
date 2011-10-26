@@ -95,6 +95,7 @@ module SimpleForm
         if name = options[:wrapper]
           name.respond_to?(:render) ? name : SimpleForm.wrapper(name)
         else
+          wrapper[:class] = attribute_name
           wrapper
         end
 
