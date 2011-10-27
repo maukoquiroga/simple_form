@@ -9,7 +9,8 @@ module SimpleForm
     # It may optionally receive a namespace, allowing it to be configured
     # on demand on input generation.
     class Many
-      attr_reader :namespace, :defaults, :components
+      attr_reader :namespace, :components
+      attr_accessor :defaults
       alias :to_sym :namespace
 
       def initialize(namespace, components, defaults={})

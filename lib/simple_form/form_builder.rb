@@ -95,7 +95,7 @@ module SimpleForm
         if name = options[:wrapper]
           name.respond_to?(:render) ? name : SimpleForm.wrapper(name)
         else
-          raise "#{wrapper.inspect}"
+          wrapper.defaults[:class] >> attribute_name
           wrapper
         end
 
