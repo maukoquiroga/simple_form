@@ -95,7 +95,7 @@ module SimpleForm
         if name = options[:wrapper]
           name.respond_to?(:render) ? name : SimpleForm.wrapper(name)
         else
-          wrapper.defaults[:class] == [:input, :pene]
+          wrapper.defaults[:class] = [:input, attribute_name.to_sym]
           wrapper
         end
 
